@@ -1,0 +1,22 @@
+H3 All Players
+table
+	tr
+		td	NAME
+		td  TEAM
+		td 	POSITION
+		td 	PRICE
+	-@players.each do |player|
+		tr
+			td
+				=player.name
+			td
+				=player.team
+			td
+				=player.position
+			td
+				=player.price
+
+
+
+h5 Add Player
+= link_to "+ Add new Player", new_player_path, class: 'button'

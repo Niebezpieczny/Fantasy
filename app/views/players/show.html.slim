@@ -1,0 +1,8 @@
+h2 Gracz
+p= @player.id
+p= @player.name 
+p= @player.team
+p= @player.position
+p= @player.price
+= link_to "+ Back to all players", players_path, class: 'button'
+= link_to "+ Add another player", new_player_path, class: 'button'

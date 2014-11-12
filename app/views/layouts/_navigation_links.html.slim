@@ -1,2 +1,6 @@
-li= link_to 'Admin area', players_path
-li= link_to 'Sing out', destroy_user_session_path, method: :delete if current_user
+li= link_to 'Sing in', new_user_session_path
+- if current_user.present?	
+	li= link_to 'Sing out', destroy_user_session_path, method: :delete 
+	li= link_to 'My team', teams_path
+- if current_user.present? && current_user.admin? 
+	li= link_to 'View Players', players_path

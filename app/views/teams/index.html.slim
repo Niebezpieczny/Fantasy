@@ -1,0 +1,8 @@
+h3 My team
+-@teams.each do |team|
+	br
+	=team.name
+	-team.players.each do |player|
+			=player.name
+			=player.price
+br =link_to "Add your own team", new_team_path, class: 'button'

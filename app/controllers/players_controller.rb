@@ -1,6 +1,6 @@
 class PlayersController < ApplicationController
   before_action :authenticate_user!
-	def index
+  def index
 		@players = Player.all
 	end
 
@@ -22,7 +22,7 @@ class PlayersController < ApplicationController
 
   private
   def player_params
-  	params.require(:player).permit(:name, :team, :position,:price)
+  	params.require(:player).permit(:name, :origin_team, :position,:price, :team_id)
   end
 
 

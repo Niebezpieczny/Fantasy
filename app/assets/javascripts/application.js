@@ -12,9 +12,13 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
+//= require dataTables/jquery.dataTables
 //= require foundation
 //= require_tree .
 $(function() {
   $(document).foundation();
 });
+$(function() {
+  $('.checkbox')
+});
+

@@ -1,3 +1,7 @@
+- set_var 'playerPrices', @player_prices
 = form.input :name
-= form.association :players, label: "Choose 3 players"
+= form.association :players, label: "Choose 3 players", as: :check_boxes
+.budget = "#{current_user.current_budget}"
+= "#{current_user.budget}"
 = form.submit
+== rjv_tags

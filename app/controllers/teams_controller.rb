@@ -1,14 +1,20 @@
 class TeamsController < ApplicationController
- def index
-		@teams = Team.all
-	end
+  
+  def index
+    @teams = Team.all
+  end
 
-	def new
-		@team = Team.new
-	end
+  def new
+    @team = Team.new
+    @player_prices = {}
 
-	def show
-		@team = Team.find(params[:id])
+    Player.all.each do |player|
+      @player_prices[player.id] = player.price
+    end
+  end
+
+  def show
+    @team = Team.find(params[:id])
   end
 
   def create
@@ -21,8 +27,8 @@ class TeamsController < ApplicationController
 
   private
   def team_params
-  	params.require(:team).permit(:name, {:player_ids =>[]}, :user_id)
-  end
+   params.require(:team).permit(:name, {:player_ids =>[]}, :user_id)
+ end
 
 
 end

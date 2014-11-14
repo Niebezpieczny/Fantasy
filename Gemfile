@@ -17,6 +17,10 @@ gem 'slim-rails'
 gem 'therubyracer', :platform=>:ruby
 gem 'devise'
 gem 'cancan'
+gem 'rjv'
+gem 'will_paginate'
+gem 'jquery-datatables-rails', github: 'rweng/jquery-datatables-rails'
+gem 'jquery-ui-rails'
 
 group :development do
   gem 'better_errors'
@@ -29,6 +33,8 @@ group :development, :test do
   gem 'faker'
   gem 'rspec-rails'
 end
+
+
 group :test do
   gem 'capybara'
   gem 'database_cleaner'
